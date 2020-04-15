@@ -1,0 +1,68 @@
+:host {
+  .app-header {
+    box-shadow: 1px 1px 1px 1px;
+    font-size: 3em;
+    padding-left: 32%;
+    color: #fbfafa;
+    text-shadow: 2px 2px #091a2a;
+    font-family: fantasy;
+
+    .header-image {
+      height: 67px;
+      position: absolute;
+      left: 12%;
+    }
+
+    .add-char-btn {
+      position: absolute;
+      width: 20%;
+      right: 20px;
+      top: 15px;
+      color: #1960ae;
+      border-radius: 20px;
+      background: white;
+
+      &:active {
+        position: absolute;
+        width: 20%;
+        right: 20px;
+        top: 15px;
+        color: white;
+        border-radius: 20px;
+        background-color: #b63032 !important;
+      }
+    }
+  }
+
+  .left-menu {
+    background: #22bcee;
+    margin-top: 2px;
+    font-size: 1.5em;
+    box-shadow: 1px -1px 1px 1px white;
+
+    .left-menu-item {
+      padding: 60px 10px;
+      text-align: center;
+      border: solid 2px white;
+      width: 111%;
+      font-weight: bold;
+
+      &:hover {
+        background: blue;
+        cursor: pointer;
+        color: white !important;
+      }
+    }
+  }
+}
+
+.app-body {
+  background: url("../assets/superheroes-bg.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+
+
+
+
