@@ -3,7 +3,14 @@ export interface CharacterModel {
   name?: string
   features?: [string]
   comicGroup?: ComicGroup
-  characterSide?: CharacterSide
+  characterType?: CharacterType
+  biggestRival?: CharacterModel,
+  charHistory: CharacterHistory,
+}
+
+export interface CharacterHistory {
+  peopleSaved?: number
+  peopleKilled?: number
 }
 
 export enum ComicGroup {
@@ -11,7 +18,7 @@ export enum ComicGroup {
   MARVEL = "MARVEL"
 }
 
-export enum CharacterSide {
+export enum CharacterType {
   HERO = "HERO",
   VILLAIN = "VILLAIN"
 }

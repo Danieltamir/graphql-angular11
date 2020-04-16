@@ -4,38 +4,8 @@ export const schemaTypes = `
   ## =========================================
 
   type Query {
-    superheroes: [Superhero]
-    villains: [Villain]
-    getSuperheroById(id: ID!): Superhero
-    getVillainById(id: ID!): Villain
-  }
-
-  type Superhero {
-    id: ID
-    name: String
-    features: [String]
-    comicGroup: ComicGroup
-    biggestEnemy: Villain
-    peopleSaved: Int
-  }
-
-  type Villain {
-    id: ID
-    name: String
-    features: [String]
-    comicGroup: ComicGroup
-    biggestEnemy: Villain
-    peopleKilled: Int
-  }
-
-  enum ComicGroup {
-    DC
-    MARVEL
-  }
-
-  enum CharacterSide {
-    HERO
-    VILLAIN
+    characters: [Character]
+    getCharacterById(id: ID!): Character
   }
 
   ## Mutations!
@@ -46,11 +16,51 @@ export const schemaTypes = `
     deleteCharacter(characterId: ID): MutationResult!
   }
 
-  input CharacterInput {
+  ## Objects Types!
+  ## =========================================
+
+  type Character {
+    id: ID
     name: String
-    characterSide: CharacterSide
+    superPowers: [String]
+    comicGroup: ComicGroup
+    characterType: CharacterType
+    biggestRival: Character
+    charHistory: CharacterHistory
+  }
+
+  union CharacterHistory = VillainHistory | SuperheroHistory
+
+  type VillainHistory {
+    peopleKilled: Int
+  }
+
+  type SuperheroHistory {
+    peopleSaved: Int
+  }
+
+  enum ComicGroup {
+    DC
+    MARVEL
+  }
+
+  enum CharacterType {
+    HERO
+    VILLAIN
+  }
+
+  ## Mutations Inputs!
+  ## =========================================
+
+  input CharacterInput {
+    id: ID
+    name: String
+    characterType: CharacterType
     features: [String]
     comicGroup: ComicGroup
+    biggestRival: CharacterInput
+    peopleKilled: Int
+    peopleSaved: Int
   }
 
   type MutationResult {

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Apollo} from "apollo-angular";
 import {Observable} from "rxjs/index";
-import {GET_ALL_VILLAINS_QUERY, GET_SUPERHERO_QUERY} from "../constants/queries";
+import {GET_ALL_VILLAINS_QUERY, GET_CHARACTER_QUERY} from "../constants/queries";
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,7 @@ export class VillainService {
 
   getVillainById(villainId): Observable<any> {
     return this.apollo.query({
-      query: GET_SUPERHERO_QUERY,
+      query: GET_CHARACTER_QUERY,
       variables: {villainId: villainId}
     });
   }

@@ -1,0 +1,25 @@
+<button class="btn btn-primary btn-block add-char-btn" (click)="openAddNewCharacterModal()">Add New Character</button>
+<div class="row grid-header">
+  <div class="col-md-4">Superhero Name</div>
+  <div class="col-md-3">Comic Group</div>
+  <div class="col-md-2">Character Type</div>
+  <div class="col-md-2">Population Affect</div>
+  <div class="col-md-1">Delete</div>
+</div>
+<cdk-virtual-scroll-viewport [itemSize]="78" class="example-viewport">
+  <div class="card" *cdkVirtualFor="let character of characters ; let index = index">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">{{character.name}}</div>
+        <div class="col-md-3"><img class="comic-group" [src]="'/assets/' + character.comicGroup.toLowerCase() + '.png'" alt=""></div>
+        <div class="col-md-2"><img class="character-type" [src]="'/assets/' + character.characterType.toLowerCase() + '.png'" alt=""></div>
+        <div class="col-md-2">
+          {{character.charHistory.peopleKilled? character.charHistory.peopleKilled : character.charHistory.peopleSaved}}
+        </div>
+        <div class="col-md-1">
+          <button class="btn btn-danger btn-block delete-btn" (click)="deleteCharacter(character.id)">X</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</cdk-virtual-scroll-viewport>

@@ -1,0 +1,62 @@
+<div class="modal-header">
+  <h1>Add New Character</h1>
+</div>
+
+<div class="modal-body">
+  <div class="row">
+    <div class="form-group col-md-6">
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter Character Name" [(ngModel)]="character.name">
+      </mat-form-field>
+    </div>
+    <div class="form-group col-md-6 radio-container">
+      <mat-radio-group [(ngModel)]="character.characterType" aria-label="Select Character Type">
+        <mat-radio-button value="VILLAIN">Villain</mat-radio-button>
+        <mat-radio-button value="HERO">Hero</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6 radio-container">
+      <mat-radio-group [(ngModel)]="character.comicGroup" aria-label="Select Character Type">
+        <mat-radio-button value="DC">DC</mat-radio-button>
+        <mat-radio-button value="MARVEL">Marvel</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="form-group col-md-6">
+      <mat-form-field>
+        <mat-label>Biggest Rival</mat-label>
+        <mat-select [(ngModel)]="character.biggestRival">
+          <mat-option *ngFor="let character of characters" [value]="character">
+            {{character.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6">
+      <mat-form-field class="example-full-width">
+        <mat-label>{{character.characterType === 'VILLAIN' ? 'People Killed' : 'People Saved'}}</mat-label>
+        <input matInput type="number"
+               placeholder="{{character.characterType === 'VILLAIN'? 'People Killed' : 'People Saved'}}"
+               [(ngModel)]="character.characterType === 'VILLAIN'? character.charHistory.peopleKilled : character.charHistory.peopleSaved">
+      </mat-form-field>
+    </div>
+
+    <div class="form-group col-md-6">
+      <mat-form-field class="example-full-width">
+        <mat-label>Features</mat-label>
+        <input matInput placeholder="Character Features" [(ngModel)]="character.features">
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button type="submit" class="btn btn-primary" (click)="save()" *ngIf="!characterId">Save</button>
+</div>

@@ -1,0 +1,23 @@
+:host {
+  .modal-header {
+    background: #236478;
+    color: white;
+    text-shadow: 1px 1px black;
+  }
+
+  .modal-body {
+    padding: 2rem;
+
+    .radio-container {
+      padding-top: 20px !important;
+    }
+
+    .col-md-6 {
+      padding: 0em 5em;
+    }
+  }
+}
+
+::ng-deep .modal-dialog {
+  max-width: 1000px;
+}

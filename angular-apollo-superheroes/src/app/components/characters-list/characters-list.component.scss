@@ -1,0 +1,86 @@
+:host {
+
+  .grid-header {
+    color: white;
+    font-weight: bold;
+    width: 97%;
+    margin-left: 0.9%;
+    margin: 0.5em;
+    font-size: 1.5em;
+  }
+
+
+  .add-char-btn {
+    position: absolute;
+    width: 20%;
+    right: 20px;
+    top: -9%;
+    color: #1960ae;
+    border-radius: 20px;
+    background: white;
+
+    &:active {
+      position: absolute;
+      width: 20%;
+      right: 20px;
+      color: white;
+      border-radius: 20px;
+      background-color: #b63032 !important;
+    }
+  }
+
+  .card {
+    box-shadow: 1px 1px 6px 3px #383d41;
+    border-radius: 50px;
+    margin: 10px;
+
+    &:hover {
+      background-color: lightgray;
+      cursor: pointer;
+    }
+
+    .card-body {
+      flex: 1 1 auto;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 1.1rem !important;
+
+      .comic-group {
+        width: 47px;
+        margin-left: 7%;
+        height: 27px;
+      }
+
+      .character-type {
+        width: 70px;
+        margin-left: 7%;
+        height: 38px;
+      }
+    }
+
+    .kill-alignment {
+      margin-left: 0%;
+      margin-right: 4.5%;
+    }
+
+    .delete-btn {
+      position: absolute;
+      width: 29%;
+      border-radius: 50%;
+    }
+
+    .life-icon {
+      position: absolute;
+      width: 50px;
+      top: -10px;
+    }
+  }
+}
+
+.example-viewport {
+  height: calc(100vh - 85px);
+  border-top: solid 1px white;
+}
+
+
+

@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {CharacterModalComponent} from "./components/character-modal/character-modal.component";
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-root',
@@ -6,14 +8,10 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
   constructor() {
   }
 
   ngOnInit() {
-  }
-
-  openDeveloperModal(characterIndex: number) {
-    // const modalRef = this.modalService.open(CharacterModalComponent);
-    // modalRef.componentInstance.characterId = characterIndex;
   }
 }
