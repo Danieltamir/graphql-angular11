@@ -10,19 +10,19 @@ const schema = makeExecutableSchema({typeDefs: schemaTypes});
 
 /**Step 2 : Adding mocks to the schema!**/
 addMockFunctionsToSchema({
-    schema,
-    mocks
+  schema,
+  mocks
 });
 
 var app = express();
 
 /**Step 3 : Running the server with GraphiQL!!**/
 app.use('/graphql', graphqlHTTP(() => ({
-    schema: schema,
-    graphiql: true
+  schema: schema,
+  graphiql: true,
+  cors: cors()
 })));
 
-app.use(cors());
-
 app.listen(3000);
-console.log('Running a GraphQL API server at localhost:3000/graphql');
+
+console.log('Running a GraphQL Mocked API Server at localhost:3000/graphql');
