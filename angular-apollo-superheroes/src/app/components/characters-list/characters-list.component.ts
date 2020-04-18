@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
-import {map, take, takeWhile} from "rxjs/operators";
+import {first, map, take, takeWhile} from "rxjs/operators";
 import {CharacterQueriesService} from "../../services/character-queries.service";
 import {CharacterModel} from "../../models/character.model";
 import {CharacterMutationsService} from "../../services/character-mutations.service";
@@ -30,7 +30,7 @@ export class CharactersListComponent implements OnInit, OnDestroy {
   }
 
   deleteCharacter(characterId: string) {
-    this.characterMutationsService.deleteCharacter(characterId).subscribe(() => {
+    this.characterMutationsService.deleteCharacter(characterId).pipe(take(1)).subscribe(() => {
       this.characters = this.characters.filter(character => character.id !== characterId);
       this.cdr.detectChanges();
     })

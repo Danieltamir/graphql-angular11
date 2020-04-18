@@ -19,9 +19,10 @@ var app = express();
 /**Step 3 : Running the server with GraphiQL!!**/
 app.use('/graphql', graphqlHTTP(() => ({
     schema: schema,
-    graphiql: true,
-    cors
+    graphiql: true
 })));
+
+app.use(cors());
 
 app.listen(3000);
 console.log('Running a GraphQL API server at localhost:3000/graphql');

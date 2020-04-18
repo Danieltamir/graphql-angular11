@@ -17,7 +17,8 @@ export class CharacterModalComponent {
   @Input() characters: CharacterModel[];
   @Input() isVillain: boolean;
   @Input() characterIndex: number;
-  character: CharacterModel = {id: null, name: '', characterType: CharacterType.HERO, biggestRival: null};
+
+  character: CharacterModel = {id: null, name: '', characterType: CharacterType.HERO, biggestRival: null, charHistory: {}};
 
   constructor(private characterQueriesService: CharacterQueriesService,
               private characterMutationService: CharacterMutationsService,

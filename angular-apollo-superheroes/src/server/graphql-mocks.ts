@@ -15,6 +15,9 @@ export const mocks = {
   }),
   Query: () => ({
     characters: () => new MockList([100, 300]),
+  }),
+  MutationResult: () => ({
+    successful: () => true,
   })
 }
 
