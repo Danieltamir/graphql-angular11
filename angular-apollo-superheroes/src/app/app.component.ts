@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {CharacterModalComponent} from "./components/character-modal/character-modal.component";
-import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-root',

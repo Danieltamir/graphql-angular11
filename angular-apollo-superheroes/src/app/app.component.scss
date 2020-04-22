@@ -1,27 +1,27 @@
 :host {
   .app-header {
-    box-shadow: 1px 1px 1px 1px;
-    font-size: 3em;
-    height: 100px;
-    padding-left: 32%;
+    font-size: 1em;
+    height: 50px;
+    padding-left: 6%;
     padding-top: 12px;
-    background: #0a00007d;
+    background: #121212;
     color: #fbfafa;
-    text-shadow: 2px 2px #091a2a;
-    font-family: fantasy;
 
     .header-image {
-      height: 67px;
+      height: 32px;
       position: absolute;
       left: 0.5%;
+      padding-right: 1%;
+      top: 8px;
+      border-right: solid 1px gray;
     }
   }
 }
 
 .app-body {
-  background: url("../assets/superheroes-bg.jpg") no-repeat;
   background-size: cover;
   height: 100vh;
+  background: #E2E2E2;
   overflow: hidden;
 }
 
