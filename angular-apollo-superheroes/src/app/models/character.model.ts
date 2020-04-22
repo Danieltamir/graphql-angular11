@@ -1,16 +1,11 @@
 export interface CharacterModel {
   id: string
   name?: string
+  age?: number
   features?: [string]
   comicGroup?: ComicGroup
   characterType?: CharacterType
   biggestRival?: CharacterModel,
-  charHistory: CharacterHistory,
-}
-
-export interface CharacterHistory {
-  peopleSaved?: number
-  peopleKilled?: number
 }
 
 export enum ComicGroup {

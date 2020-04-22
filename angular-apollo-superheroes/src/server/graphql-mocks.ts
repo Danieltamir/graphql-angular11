@@ -5,13 +5,7 @@ export const mocks = {
   String: () => faker.name.jobDescriptor(),
   Character: () => ({
     name: () => mockedCharacters(),
-    features: () => new MockList([2, 10]),
-  }),
-  VillainHistory: () => ({
-    peopleKilled: () => faker.random.number(100000),
-  }),
-  SuperheroHistory: () => ({
-    peopleSaved: () => faker.random.number(100000),
+    age: () => faker.random.number([1,200])
   }),
   Query: () => ({
     characters: () => new MockList([100, 300]),

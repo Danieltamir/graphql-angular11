@@ -1,6 +1,6 @@
 export const schemaTypes = `
 
-  ## Queries!
+  ## Queries
   ## =========================================
 
   type Query {
@@ -8,7 +8,7 @@ export const schemaTypes = `
     getCharacterById(id: ID!): Character
   }
 
-  ## Mutations!
+  ## Mutations
   ## =========================================
 
   type Mutation {
@@ -22,21 +22,11 @@ export const schemaTypes = `
   type Character {
     id: ID
     name: String
+    age: Int
     superPowers: [String]
     comicGroup: ComicGroup
     characterType: CharacterType
     biggestRival: Character
-    charHistory: CharacterHistory
-  }
-
-  union CharacterHistory = VillainHistory | SuperheroHistory
-
-  type VillainHistory {
-    peopleKilled: Int
-  }
-
-  type SuperheroHistory {
-    peopleSaved: Int
   }
 
   enum ComicGroup {
