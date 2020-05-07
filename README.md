@@ -1,6 +1,8 @@
-# AngularApolloSuperheroes
+Hey everyone! this is the demo application from the JSVidCon Javascript Conference! 🎉
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
+The application will show how to make Angular applications communicate with GraphQL servers using a mocked GraphQL server and a simple angular application.
+
+Clone it, npm install it, run start and server scripts and you`re off to go! 🤘
 
 ## Development server
 
