@@ -8,22 +8,10 @@ Clone it, npm install it, run start and server scripts and you`re off to go! ðŸ¤
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Please use chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security for running chrome without the security it needs for talking to the mocked server.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Mocked GraphQL Server
 
-## Build
+Run `npm run server` for running our mocked GraphQL server for the application use, when running it, you`ll be able to go to http://localhost:3000/graphql and query using GraphiQL without the application being running!
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+For any questions, feel free contacting me at twitter: https://twitter.com/danieltamirr or linkedin: https://www.linkedin.com/in/daniel-tamir-993074b3/
