@@ -43,8 +43,6 @@ export class CharacterMutationsService {
       features: character.features ? character.features.toString().split(',') : null,
       comicGroup: character.comicGroup,
       biggestRival: character.biggestRival? this.arrangeCharacter(character.biggestRival) : null,
-      peopleKilled: character.charHistory?.peopleKilled && character.characterType === CharacterType.VILLAIN? character.charHistory?.peopleKilled : null,
-      peopleSaved: character.charHistory?.peopleSaved && character.characterType === CharacterType.HERO? character.charHistory?.peopleSaved : null,
     }
   }
 }
