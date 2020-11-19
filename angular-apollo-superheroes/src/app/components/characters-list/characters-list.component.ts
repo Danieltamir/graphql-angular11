@@ -33,7 +33,7 @@ export class CharactersListComponent implements OnInit, OnDestroy {
     this.characterMutationsService.deleteCharacter(characterId).pipe(take(1)).subscribe(() => {
       this.characters = this.characters.filter(character => character.id !== characterId);
       this.cdr.detectChanges();
-    })
+    });
   }
 
   openAddNewCharacterModal() {

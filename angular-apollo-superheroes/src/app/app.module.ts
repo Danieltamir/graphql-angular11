@@ -14,12 +14,14 @@ import {MatSelectModule} from '@angular/material/select';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
+import { CharacterListItemComponent } from './components/characters-list/character-list-item/character-list-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharacterModalComponent,
-    CharactersListComponent
+    CharactersListComponent,
+    CharacterListItemComponent
   ],
   imports: [
     BrowserModule,

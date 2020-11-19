@@ -1,0 +1,32 @@
+:host {
+  .card-body {
+    flex: 1 1 auto;
+    font-size: 1.5em;
+    padding: 1.1rem !important;
+
+    .comic-group {
+      width: 47px;
+      margin-left: 7%;
+      height: 27px;
+    }
+
+    .character-type {
+      width: 70px;
+      margin-left: 7%;
+      height: 38px;
+    }
+  }
+
+  .delete-btn {
+    position: absolute;
+    font-size: 3em;
+    right: 0;
+    color: #e2e2e2;
+    margin-top: -49px;
+    margin-right: -121px;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
