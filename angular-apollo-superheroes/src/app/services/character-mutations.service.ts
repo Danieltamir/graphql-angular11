@@ -31,9 +31,9 @@ export class CharacterMutationsService {
     return this.apollo.mutate({
       mutation: deleteCharacterMutation,
       variables: {
-        characterId: characterId
+        characterId
       }
-    })
+    });
   }
 
   private arrangeCharacter(character: CharacterModel) {
@@ -41,8 +41,7 @@ export class CharacterMutationsService {
       name: character.name,
       characterType: character.characterType,
       features: character.features ? character.features.toString().split(',') : null,
-      comicGroup: character.comicGroup,
-      biggestRival: character.biggestRival? this.arrangeCharacter(character.biggestRival) : null,
-    }
+      comicGroup: character.comicGroup
+    };
   }
 }

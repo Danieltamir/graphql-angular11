@@ -1,8 +1,8 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {CharacterQueriesService} from "../../services/character-queries.service";
-import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {CharacterMutationsService} from "../../services/character-mutations.service";
-import {CharacterModel, CharacterType} from "../../models/character.model";
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {CharacterQueriesService} from '../../services/character-queries.service';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {CharacterMutationsService} from '../../services/character-mutations.service';
+import {CharacterModel} from '../../models/character.model';
 
 @Component({
   selector: 'app-character-modal',
@@ -17,8 +17,7 @@ export class CharacterModalComponent {
   @Input() characters: CharacterModel[];
   @Input() isVillain: boolean;
   @Input() characterIndex: number;
-
-  character: CharacterModel = {id: null, name: '', characterType: CharacterType.HERO, biggestRival: null};
+  character: CharacterModel = {id: null, name: '', characterType: null};
 
   constructor(private characterQueriesService: CharacterQueriesService,
               private characterMutationService: CharacterMutationsService,

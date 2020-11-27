@@ -48,7 +48,6 @@ export const schemaTypes = `
     characterType: CharacterType
     features: [String]
     comicGroup: ComicGroup
-    biggestRival: CharacterInput
     peopleKilled: Int
     peopleSaved: Int
   }

@@ -1,11 +1,19 @@
-<button class="btn btn-primary btn-block add-char-btn" (click)="openAddNewCharacterModal()">Add New Character</button>
+<button class="btn btn-primary btn-block add-char-btn" (click)="openAddNewCharacterModal()"
+        appHighlight>{{'Add New Character' | uppercase}}</button>
 <div class="row grid-header">
   <div class="col-md-4">Superhero Name</div>
   <div class="col-md-3">Comic Group</div>
   <div class="col-md-3">Character Type</div>
 </div>
-<cdk-virtual-scroll-viewport [itemSize]="78" class="example-viewport">
-  <div class="card" *cdkVirtualFor="let character of characters ; let index = index">
-    <app-character-list-item [character]="character" (deleteCharacter)="deleteCharacter($event)"></app-character-list-item>
-  </div>
-</cdk-virtual-scroll-viewport>
+
+<div class="no-results" *ngIf="characters.length === 0">Ops! no characters were found 🔍</div>
+
+<div class="list-container">
+  <app-character-list-item
+    class="card"
+    *ngFor="let character of characters ; let index = index"
+    [character]="character"
+    (deleteCharacter)="deleteCharacter($event)">
+  </app-character-list-item>
+</div>
+
