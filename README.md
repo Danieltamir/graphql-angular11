@@ -1,4 +1,4 @@
-Hey everyone! this is the demo application from the JSVidCon Javascript Conference! 🎉
+Hey everyone! this is the demo application from the Angular UP 2020! 🎉
 
 The application will show how to make Angular applications communicate with GraphQL servers using a mocked GraphQL server and a simple angular application.
 
